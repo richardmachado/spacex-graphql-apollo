@@ -1,0 +1,31 @@
+{
+  "name": "spacex-graphql-apollo",
+  "version": "1.0.0",
+  "description": "SpaceX missions using graphql and apollo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardmachado/spacex-graphql-apollo.git"
+  },
+  "keywords": [],
+  "author": "Richard Machado",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/richardmachado/spacex-graphql-apollo/issues"
+  },
+  "homepage": "https://github.com/richardmachado/spacex-graphql-apollo#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^15.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
