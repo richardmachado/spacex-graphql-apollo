@@ -21,6 +21,7 @@ query LaunchesQuery {
         mission_name
         launch_date_local
         launch_success
+       
     }
 }
 `;
@@ -42,7 +43,8 @@ export class Launches extends Component {
                          
                             />
                              </div>
-                            if (error) console.log(error);
+                        if (error) console.log(error);
+                        console.log(data)
                            
 
                         return <Fragment>

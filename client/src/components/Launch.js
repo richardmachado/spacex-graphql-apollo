@@ -21,6 +21,7 @@ const LAUNCH_QUERY = gql`
          launch_year
          launch_success
          launch_date_local
+         details
          rocket {
              rocket_id
              rocket_name
@@ -49,7 +50,7 @@ export default class Launch extends Component {
                                  </div>
                             if (error) console.log(error)
 
-                            const { mission_name, flight_number, launch_year, launch_success, rocket: { rocket_id, rocket_name, rocket_type } } = data.launch;
+                            const { mission_name, flight_number, launch_year, launch_success, details, rocket: { rocket_id, rocket_name, rocket_type } } = data.launch;
 
                             return <div>
                                 <h1 className="display-4 my3"><span classname="text-dark"> Mission:</span> {mission_name}</h1>
@@ -66,6 +67,9 @@ export default class Launch extends Component {
                                             'text-success': launch_success,
                                             'text-danger': !launch_success
                                         })}>{launch_success ? 'Yes' : 'No'}</span> 
+                                    </li>
+                                    <li className="list-group-item">
+                                            Details: {details}
                                     </li>
                                         <h4 className="my-3">Rocket Details</h4>
                                     <ul className="list-details">

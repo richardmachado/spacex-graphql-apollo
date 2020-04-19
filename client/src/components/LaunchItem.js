@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import Moment from 'react-moment';
 
-export default function LaunchItem({launch:{ flight_number, mission_name, launch_date_local, launch_success}}) {
+export default function LaunchItem({launch:{ flight_number, mission_name, launch_date_local, launch_success, details}}) {
     
     return (
         <div className="card card-body mb-3">
@@ -15,6 +15,7 @@ export default function LaunchItem({launch:{ flight_number, mission_name, launch
                         'text-danger': !launch_success
                     })}> {mission_name}</span></h4>
                     <p>Date: <Moment format="MM-DD-YYYY HH:mm  ">{launch_date_local}</Moment></p>
+                    
                 </div>
                 <div className="col-md-3">
                     <Link to={`/launch/${flight_number}`}  className="btn btn-secondary">Launch Details</Link>
